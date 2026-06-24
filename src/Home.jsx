@@ -3,6 +3,7 @@ import ListView from "./ViewMode/List/ListView";
 import { fetchPosts } from "./PostData/GetData";
 import HeaderSection from "./common/HeaderSecion";
 import styled from "styled-components";
+import Board from "./ViewMode/board/board";
 export default function Home() {
     const [filter, setFilter] = useState("리스트");
     const [posts, setPosts] = useState([]);
@@ -23,7 +24,7 @@ export default function Home() {
         <SectionDiv>
             <HeaderSection filter={filter} setFilter={setFilter} />
             {filter == "리스트" && <ListView posts={sortedPosts}/>}
-            {filter == "보드" && <ListView posts={sortedPosts}/>}
+            {filter == "보드" && <Board posts={sortedPosts}/>}
             {filter == "갤러리" && <ListView posts={sortedPosts}/>}
             {filter == "피드" && <ListView posts={sortedPosts}/>}
         </SectionDiv>
