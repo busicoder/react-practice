@@ -1,0 +1,21 @@
+.board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.card {
+    display: flex;
+    width: 340px;
+    padding: 20px 10px;
+    align-items: center;
+    gap: 12px;
+    grid-row: span 1;
+    grid-column: span 1;
+
+    border-radius: 12px;
+    border: 1px solid var(--line-primary, rgba(112, 115, 124, 0.22));
+    background-color: white;
+}
