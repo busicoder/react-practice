@@ -21,7 +21,7 @@ export default function HeaderSection({ filter, setFilter }) {
         <div className="title">블로그</div>
         <div className="order" onClick={onClickOrder}>
           <CurrentFilter>{filter}</CurrentFilter>
-          <CaretIcon showOrders={showOrders} />
+          <CaretIcon $showOrders={showOrders} />
           {showOrders && (
             <OrderList className="orders">
               {orders.map((order) => (
