@@ -4,6 +4,7 @@ import { fetchPosts } from "./PostData/GetData";
 import HeaderSection from "./common/HeaderSecion";
 import styled from "styled-components";
 import Board from "./ViewMode/board/board";
+import FeedView from "./ViewMode/feed/FeedView";
 export default function Home() {
     const [filter, setFilter] = useState("리스트");
     const [posts, setPosts] = useState([]);
@@ -26,7 +27,7 @@ export default function Home() {
             {filter == "리스트" && <ListView posts={sortedPosts}/>}
             {filter == "보드" && <Board posts={sortedPosts}/>}
             {filter == "갤러리" && <ListView posts={sortedPosts}/>}
-            {filter == "피드" && <ListView posts={sortedPosts}/>}
+            {filter == "피드" && <FeedView posts={sortedPosts}/>}
         </SectionDiv>
     )
 }
