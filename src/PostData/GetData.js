@@ -9,10 +9,11 @@ export async function fetchPosts() {
             throw new Error("something went wrong");
         }
         const data = await response.json();
-        setPosts(data.data.reverse());
+        return data.data.reverse();
         //최신글을 top으로하기 위해서 reverse
     } catch (error) {
         console.error("Error fetching posts:", error);
+        return null;
     }
 }
 

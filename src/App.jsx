@@ -1,9 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { useEffect, useState } from 'react'
+import { fetchPosts,fetchDetail } from './PostData/GetData'
 
 function App() {
+  useEffect(async ()=>{
+    console.log(await fetchPosts());
+  },[]);
   
   return (
     <>
